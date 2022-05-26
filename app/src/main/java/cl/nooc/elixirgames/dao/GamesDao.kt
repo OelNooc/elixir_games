@@ -16,7 +16,7 @@ interface GamesDao {
 
     @Query("select Id, Name, bc_image," +
             "metacritic, rating, released from Games")
-    fun listar(): LiveData<Games>
+    fun listar(): LiveData<List<GamesItem>>
 
     @Query("select Id, Name, bc_image," +
         "metacritic, rating, released from Games where id = :id")
