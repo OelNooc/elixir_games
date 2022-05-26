@@ -65,4 +65,11 @@ class GamesViewModel (application: Application) : AndroidViewModel(application) 
             }
         }
     }
+
+    fun updateGame(id:String)
+    {
+        CoroutineScope(Dispatchers.IO).launch {
+            game.postValue(gamesRepo.buscar(id))
+        }
+    }
 }
