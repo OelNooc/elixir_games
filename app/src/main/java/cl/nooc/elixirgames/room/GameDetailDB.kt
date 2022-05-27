@@ -7,6 +7,7 @@ import androidx.room.RoomDatabase
 import cl.nooc.elixirgames.dao.GamesDetailDao
 import cl.nooc.elixirgames.modelo.GameDetail
 
+//crear sólo una base de datos con ambas tablas!!
 @Database(entities = [GameDetail::class], version = 1)
 abstract class GameDetailDB: RoomDatabase() {
 

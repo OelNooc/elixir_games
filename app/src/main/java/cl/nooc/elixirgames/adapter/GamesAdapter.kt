@@ -24,7 +24,7 @@ class GamesAdapter: RecyclerView.Adapter<GamesAdapter.CustomViewHolder>() {
         {
             with(binding)
             {
-                Picasso.get().load(game.background_image)
+                Picasso.get().load(game.background_image).resize(250,250).into(ivGame)
                 tvNameGame.text = game.name
                 tvGameOut.text = game.released
                 itemView.setOnClickListener {
